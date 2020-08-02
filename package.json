@@ -1,0 +1,22 @@
+{
+  "name": "html2pdf",
+  "version": "1.0.0",
+  "description": "HTML to PDF",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node ./index.js"
+  },
+  "author": "Okeyja",
+  "license": "MIT",
+  "dependencies": {
+    "html-pdf": "^2.1.0",
+    "moment": "^2.18.1",
+    "phantomjs": "^2.1.7"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.26.0",
+    "nodemon": "^2.0.4"
+  }
+}

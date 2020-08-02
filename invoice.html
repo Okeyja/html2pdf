@@ -1,0 +1,239 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Invoice</title>
+
+    <style>
+        .invoice-box table {
+            width: 100%;
+            line-height: inherit;
+            text-align: left;
+        }
+
+        .invoice-box table td {
+            padding: 5px;
+            vertical-align: top;
+        }
+
+        .invoice-box table tr td:nth-child(2) {
+            text-align: right;
+        }
+
+        .invoice-box table tr.top table td {
+            padding-bottom: 20px;
+        }
+
+        .invoice-box table tr.top table td.title {
+            font-size: 45px;
+            line-height: 45px;
+            color: #333;
+        }
+
+        .invoice-box table tr.information table td {
+            padding-bottom: 40px;
+        }
+
+        .invoice-box table tr.heading td {
+            background: #eee;
+            border-bottom: 1px solid #ddd;
+            font-weight: bold;
+        }
+
+        .invoice-box table tr.details td {
+            padding-bottom: 20px;
+        }
+
+        .invoice-box table tr.item td {
+            border-bottom: 1px solid #eee;
+        }
+
+        .invoice-box table tr.item.last td {
+            border-bottom: none;
+        }
+
+        .invoice-box table tr.total td:nth-child(2) {
+            border-top: 2px solid #eee;
+            font-weight: bold;
+        }
+
+        @media only screen and (max-width: 600px) {
+            .invoice-box table tr.top table td {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+
+            .invoice-box table tr.information table td {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
+
+        /** RTL **/
+        .rtl {
+            direction: rtl;
+            font-family: Tahoma, 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+        }
+
+        .rtl table {
+            text-align: right;
+        }
+
+        .rtl table tr td:nth-child(2) {
+            text-align: left;
+        }
+    </style>
+
+    <style media="screen">
+        .invoice-box {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            border: 1px solid #eee;
+            box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+            font-size: 16px;
+            line-height: 24px;
+            font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;
+            color: #555;
+        }
+    </style>
+
+    <style media="print">
+        .no-print {
+            visibility: hidden;
+        }
+    </style>
+</head>
+
+<body>
+<div class="invoice-box">
+    <a href="javascript:window.print();" class="no-print">Print Invoice</a>
+    <table cellpadding="0" cellspacing="0">
+        <tr class="top">
+            <td colspan="3">
+                <table>
+                    <tr>
+                        <td class="title">
+                            <img src="http://v1.cdn-static.cn/2020/4/28/58651_k9jci3uv_83738.png"
+                                 style="width:100%; max-width:200px;">
+                        </td>
+
+                        <td>
+                            Invoice No: G.2020000308<br>
+                            Invoice Date: July,15,2020<br>
+                            Due Date: Aug,14,2020<br>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr class="information">
+            <td colspan="2">
+                <table>
+                    <tr>
+                        <td>
+                            Hong Kong Includewill Technology Co., Ltd.<br>
+                            OFFICE 3A-9, 12/F.,<br>
+                            KAISER CENTER, NO.18 CENTER STREET,<br>
+                            SAI YING PUN, HONGKONG
+                        </td>
+
+                        <td>
+                            辉耀互娱<br>
+                            九龍大角咀必發道138號恆昌中心704室
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <!--<tr class="heading">
+            <td>
+                Payment Method
+            </td>
+
+            <td>
+                Check #
+            </td>
+        </tr>-->
+
+        <!--<tr class="details">
+            <td>
+                Check
+            </td>
+
+            <td>
+                1000
+            </td>
+        </tr>-->
+
+        <tr class="heading">
+            <td>
+                Item
+            </td>
+
+            <td>
+                Price
+            </td>
+        </tr>
+
+        <tr class="item">
+            <td>
+                AWS Services Total (2020-06)
+            </td>
+
+            <td>
+                $3207.29
+            </td>
+        </tr>
+
+        <tr class="item last">
+            <td>
+                AWS Support Total (2020-06)
+            </td>
+
+            <td>
+                $200.00
+            </td>
+        </tr>
+
+        <tr class="total">
+            <td></td>
+            <td>
+                Total: $3407.29
+            </td>
+        </tr>
+        <tr class="information">
+            <td colspan="2">
+                <table>
+                    <tr>
+                        <td><br></td>
+                        <td><br></td>
+                    </tr>
+                    <tr>
+                        <th>REMIT PAYMENT TO:</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            NAME: HONGKONG INCLUDEWILL TECHNOLOGY LIMITED<br>
+                            BENEFICIARY BANK NAME: STANDARD CHARTERED BANK (CHINA) LIMITED CHENGDU CHINA<br>
+                            ACCOUNT NUMBER: NRA000000501511395767<br>
+                            BANK ADDRESS: Unit7-10, 18F, Office Tower 1, IFS, No.1, Section 3, Hongxing Road, Jinjiang
+                            District, Chengdu<br>
+                            SWIFT CODE: SCBL CNSX CDU<br>
+                            BANK CODE NUMBER: 671290000017<br>
+                        </td>
+
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>
