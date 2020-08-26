@@ -11,7 +11,7 @@
   "dependencies": {
     "html-pdf": "^2.1.0",
     "moment": "^2.18.1",
-    "phantomjs": "^2.1.7"
+    "phantom": "^6.3.0"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
